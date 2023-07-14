@@ -1,0 +1,18 @@
+.networks-banner {
+  @apply relative w-full overflow-hidden h-[1.625rem];
+  .networks-banner-wrapper {
+    @apply absolute flex gap-x-6;
+  }
+  .networks-banner-section {
+    @apply flex gap-6 items-center;
+    animation: swipe 10s linear infinite backwards;
+  }
+  @keyframes swipe {
+    0% {
+      transform: translate(0);
+    }
+    100% {
+      transform: translate(-100%);
+    }
+  }
+}

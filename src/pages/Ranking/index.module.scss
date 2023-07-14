@@ -1,0 +1,67 @@
+.ranking-page {
+  background: url(/ranking-background.png) no-repeat center top;
+  .ranking-page-table {
+    @apply min-h-[50vh];
+    :global {
+      .ant-table {
+        @apply bg-header rounded-2xl border border-white/10 overflow-hidden;
+
+      }
+      .ant-table-thead {
+        th {
+          @apply text-white/30;
+          @apply bg-header;
+        }
+        .ant-table-cell {
+          @apply font-app font-normal text-base leading-7 pl-4 border-b-white/10;
+          &:before {
+            @apply hidden;
+          }
+        }
+      }
+      .ant-table-tbody {
+        .ant-table-cell {
+          @apply font-app font-semibold text-base leading-none text-white pl-4 py-7 border-b-white/0;
+        }
+        .ant-table-row:hover .ant-table-cell {
+          @apply bg-header;
+        }
+        .ant-table-placeholder,
+        .ant-table-placeholder:hover > td {
+          @apply bg-header;
+        }
+        .ant-table-placeholder .ant-table-cell {
+          @apply border-b-white/0;
+        }
+      }
+      .ant-empty-description {
+        @apply font-app text-white/30;
+      }
+      .ant-pagination-item {
+        @apply text-white font-app text-base leading-none;
+      }
+      .ant-pagination-item.ant-pagination-item-active {
+        background-color: transparent;
+        @apply border-active rounded-sm text-active;
+      }
+      .ant-pagination-disabled {
+        @apply opacity-30;
+      }
+    }
+    .ranking-page-address-cell {
+      @apply font-normal text-sm leading-normal;
+    }
+    .ranking-page-pagination-action {
+      @apply flex items-center justify-center border border-white/10 rounded-sm h-8 w-8;
+    }
+    .ranking-page-highlight {
+      @apply bg-active;
+      :global .ant-table-cell {
+        @apply text-black;
+      }
+      .ranking-page-address-cell {
+        @apply font-semibold;
+      }
+    }
+  }
+}

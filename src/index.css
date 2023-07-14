@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#landing-main .slider-container {
+  width: 100%;
+}
+
+@layer base {
+  :root {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    color-scheme: light dark;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    color: #fff;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: #fff;
+    }
+  }
+}
+
+@layer components {
+  .btn-launch {
+    @apply bg-header py-4 px-6 border border-white/10 font-semibold text-xs leading-none md:text-sm md:leading-none text-white rounded-full;
+    transition: .3s;
+  }
+  .btn-launch--active,
+  .btn-launch:hover {
+    @apply text-active border-active bg-active/10;
+  }
+  .btn-primary {
+    @apply py-4 px-6 border border-white/50 font-semibold text-base leading-none text-white/80 rounded-full min-w-[12.5rem];
+  }
+  .btn-primary--active {
+    @apply bg-active border-active text-black;
+  }
+  .btn-primary--disabled {
+    @apply pointer-events-none cursor-default text-white/30 border-white/10 bg-white/5;
+  }
+  .btn-secondary {
+    @apply bg-none border-secondary/50 text-secondary/50 border border-secondary/50 py-[0.875rem] px-6 min-w-[9.375rem] flex items-center justify-center rounded-full;
+    transition: .3s;
+  }
+  .btn-secondary:hover {
+    @apply bg-active/10 border-active text-active;
+  }
+  .btn-black {
+    @apply py-5 px-8 font-semibold text-base leading-none text-white rounded-full bg-black;
+  }
+  .app-link {
+    @apply text-base leading-[1.2] font-medium text-white/80;
+    transition: .3s;
+  }
+  .app-link:hover {
+    @apply text-active;
+  }
+  .app-slogan {
+    font-family: 'Syncopate', system-ui, sans-serif;
+    @apply text-[1.625rem] leading-normal md:text-5xl md:leading-normal;
+  }
+  .app-input {
+    @apply bg-black/20 border border-white/10 py-[0.875rem] px-6 text-base leading-7 text-black rounded-full placeholder:text-[#110D25]/30;
+  }
+  .app-input-address {
+    @apply bg-white/5 border border-white/10 py-5 px-4 text-sm leading-normal text-white rounded-xl placeholder:text-white/30;
+  }
+  .app-input-address:focus,
+  .app-input:focus {
+    outline: none;
+  }
+  .transition-all {
+    transition: .3s;
+  }
+  .app-radial {
+    filter: blur(6rem);
+    -webkit-filter: blur(6rem);
+    @media screen(md) {
+      filter: blur(12rem);
+      -webkit-filter: blur(12rem);
+    }
+  }
+  /* 
+  .btn-reset {
+    @apply py-1.5 px-6 font-bold text-base text-white rounded-[1.25rem] bg-primary;
+  }
+  .btn-primary:disabled {
+    @apply opacity-20;
+  }
+  .btn-white {
+    @apply font-medium text-sm text-black bg-white rounded-[1.25rem] py-1.5 px-3;
+  }
+  .app-menu {
+    @apply !top-0 !left-0 !right-0 h-screen pt-20 bg-black/80 z-40 select-none;
+  }
+  .app-menu__container {
+    @apply !mx-4 !bg-content/100 !border-2 !border-white !rounded-[2rem] !shadow-[4px_4px_8px_rgba(0,0,0,0.12)] !p-3;
+    @apply font-medium text-base;
+  }
+  .app-menu__option {
+    @apply px-3 py-2.5 font-medium text-white text-base;
+  }
+  .app-modal {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    @apply rounded-[2.5rem] bg-panel w-[343px] p-6 mx-auto relative flex flex-col items-center justify-center pointer-events-auto;
+  }
+  .app-result-box {
+    @apply rounded-[0.875rem] border-2 border-white pt-3.5 pb-2.5 px-4 text-black font-medium text-2xl leading-[1.875rem];
+    background: linear-gradient(215.9deg, #FFF6D5 0.74%, #FFC700 59.79%, #FFEDAC 101.98%);
+  }
+  .btn-modal {
+    @apply rounded-[2.5rem] h-10 py-2 px-5 bg-white text-panel font-bold text-base text-center;
+  } */
+  .app-font {
+    font-family: 'Montserrat', system-ui, sans-serif;
+  }
+}

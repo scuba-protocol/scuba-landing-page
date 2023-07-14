@@ -1,0 +1,15 @@
+.journey-carousel {
+  @apply relative w-screen;
+  .journey-carousel-item {
+    @apply pl-3 w-[calc(100vw-3.5rem)] md:w-[calc(60vw-3.5rem)];
+    &:first-child {
+      @apply pl-4;
+    }
+  }
+  .journey-carousel-wrapper {
+    @apply relative w-[100vw] overflow-hidden md:self-start md:w-[calc(100vw-1rem)];
+  }
+  .journey-carousel-container {
+    @apply flex flex-nowrap w-[300vw] md:w-[180vw] pb-6;
+  }
+}
