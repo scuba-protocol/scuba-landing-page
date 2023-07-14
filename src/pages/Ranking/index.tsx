@@ -109,7 +109,7 @@ const Ranking: React.FC = () => {
   }
 
   useEffect(() => {
-    handleRankList(1);
+    // handleRankList(1);
   }, []);
 
   useEffect(() => {

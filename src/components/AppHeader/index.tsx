@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { ReactComponent as Logo } from '@assets/icons/logo.svg';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { COMMUNITY, URLS } from '@config/constants';
 
 interface IAppHeader {}
@@ -19,6 +19,7 @@ const AppHeader: React.FC<IAppHeader> = (props) => {
           onClick={() => navigate('/')}
         />
         <div className="flex items-center md:gap-2 lg:gap-4">
+          <Link to="/leaderBoard" className="app-link py-2 md:px-2 lg:px-3 hidden md:flex">Leader Board</Link>
           <a className="app-link py-2 md:px-2 lg:px-3 hidden md:flex" target="_blank" href={URLS.CAMPAIGN}>Campaign</a>
           <a className="app-link py-2 md:px-2 lg:px-3 hidden md:flex" target="_blank" href={URLS.GITBOOK}>Docs</a>
           <a className="app-link py-2 md:px-2 lg:px-3 hidden md:flex" target="_blank" href={COMMUNITY.DISCORD}>Community</a>
