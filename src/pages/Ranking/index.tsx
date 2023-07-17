@@ -83,8 +83,8 @@ const Ranking: React.FC = () => {
 
   const handleSearch = () => {
     setFetching(true);
+    setCurrent({ page: '0', total: '0', list: [], highlight: -1 });
     if (!address) {
-      setCurrent({ page: '0', total: '0', list: [], highlight: -1 });
       return handleRankList(1);
     }
     return getRankPosition(address, PER_PAGE_LIMIT)
