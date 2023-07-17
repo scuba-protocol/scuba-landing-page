@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: 'http://54.214.140.151:8080',
+  baseURL: 'https://tracer.scuba.finance',
   timeout: 2500,
 });
 

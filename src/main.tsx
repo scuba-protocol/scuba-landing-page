@@ -16,7 +16,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route path="/" element={<Main />} />
-          <Route path="campaign" element={<Campaign />} />
+          {/* <Route path="campaign" element={<Campaign />} /> */}
           <Route path="leaderBoard" element={<Ranking />} />
           <Route path="*" element={<Main />} />
         </Route>

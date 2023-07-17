@@ -7,6 +7,7 @@ import { ReactComponent as PaginationNext } from '@assets/icons/pagination-next.
 
 import React, { useEffect, useState } from 'react';
 import { getRankList, getRankPosition } from '@apis/ranking';
+import { URLS } from '@config/constants';
 
 import modules from './index.module.scss';
 
@@ -44,12 +45,16 @@ const columns = [
   },
 ];
 
-const PER_PAGE_LIMIT = 3;
+const PER_PAGE_LIMIT = 10;
 
 const Ranking: React.FC = () => {
   const [fetching, setFetching] = useState(false);
   const [address, setAddress] = useState<string>('');
   const [current, setCurrent] = useState<RankingPageState>({ page: '0', total: '0', list: [], highlight: -1 });
+
+  const handleLaunch = () => {
+    window.open(URLS.DAPP, '_blank');
+  }
 
   const handleAddressChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value: address } = event.target;
@@ -109,7 +114,7 @@ const Ranking: React.FC = () => {
   }
 
   useEffect(() => {
-    // handleRankList(1);
+    handleRankList(1);
   }, []);
 
   useEffect(() => {
@@ -134,7 +139,7 @@ const Ranking: React.FC = () => {
                 The ‘Treasure Looting’ Campaign is here—Celebrate the First Beta Test of Scuba!
               </div>
               <div className="flex items-center">
-                <button className="btn-primary btn-primary--active">
+                <button className="btn-primary btn-primary--active" onClick={handleLaunch}>
                   Start Testing
                 </button>
               </div>
