@@ -8,7 +8,7 @@ export const URLS = {
 }
 
 export const COMMUNITY = {
-  DISCORD: 'https://discord.gg/5vPZ3TxT',
+  DISCORD: 'https://discord.gg/3Tv8kxkZkf',
   TWITTER: 'https://twitter.com/scubaprotocol',
   MEDIUM: 'https://medium.com/@scuba.protocol',
   GITHUB: 'https://github.com/scuba-protocol'
