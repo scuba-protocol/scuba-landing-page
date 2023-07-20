@@ -42,7 +42,7 @@ const AppFooter: React.FC = (props) => {
     <footer className="px-4 py-16 lg:px-16 flex flex-col gap-y-6 lg:gap-y-12 w-screen absolute bottom-0 z-50">
       <div className="w-full flex flex-col lg:flex-row gap-y-12 justify-between items-baseline">
         <Logo className="h-10" />
-        <div className="flex gap-x-6 lg:gap-x-16 items-center text-sm leading-normal text-footer">
+        <div className="grid grid-cols-3 grid-rows-2 gap-y-2 md:flex gap-x-6 lg:gap-x-16 items-center text-sm leading-normal text-footer">
           <Link className="lg:hover:text-active" to="/leaderboard">Leaderboard</Link>
           <a className="lg:hover:text-active" target="_blank" href={URLS.CAMPAIGN}>Campaign</a>
           <a className="lg:hover:text-active" target="_blank" href={URLS.GITBOOK}>Docs</a>
