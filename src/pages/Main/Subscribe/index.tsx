@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { LoadingOutlined } from '@ant-design/icons';
 import { notification } from 'antd';
+import axios from 'axios';
 
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 const headers = new Headers();
@@ -15,30 +16,24 @@ const Subscribe: React.FC = () => {
   const handleSubscribe = () => {
     if (email && emailRegex.test(email)) {
       setPending(true);
-      fetch(
-        "https://script.google.com/macros/s/AKfycby6MIoOln3cTDSIsg51UoMqjE1erMbTb8KJgnJDU_N1Wrn3aRBO-UW9fxxsIJmYAGJ-/exec",
-        {
-          method: 'POST',
-          headers,
-          body: JSON.stringify({ email }),
-          redirect: 'follow'
-        }
+      axios.post(
+        'https://cqwqgib77ikehozek4rkr27anu0qyoze.lambda-url.us-west-2.on.aws',
+        { email_address: email, tags: ['landing_page'] }
       )
-        .then(response => response.text())
-        .then(result => {
-          if (result === 'success') {
-            api.info({
-              message: 'Thank you for subscribing!',
-              description: 'You have successfully subscribed to our list.',
-              placement: 'bottomRight',
-            });
-          }
+        .then(() => {
+          api.success({
+            message: 'Thank you for subscribing!',
+            description: 'You have successfully subscribed to our list.',
+            placement: 'bottomRight',
+          });
         })
-        .catch(console.log)
+        .catch(error => {
+          console.log(error);
+        })
         .finally(() => {
           setEmail('');
           setPending(false);
-        })
+        });
     }
   }
   return (
