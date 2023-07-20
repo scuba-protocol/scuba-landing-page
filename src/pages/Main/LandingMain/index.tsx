@@ -33,7 +33,7 @@ const LandingMain: React.FC = (props) => {
               Zero Knowledge Smart Account for Web3
             </div>
             <div className="font-medium text-sm md:text-[1.375rem] leading-[1.2] text-white/80">
-              Lightweight , Efficient , Secure , Composable
+              Lightweight, Efficient, Secure, Composable
             </div>
             <div className="flex flex-col md:flex-row items-center justify-center gap-x-6 gap-y-4 w-full md:w-auto px-8 md:px-0">
               <a className="btn-primary w-full md:w-auto flex justify-center" target="_blank" href={URLS.GITBOOK}>
