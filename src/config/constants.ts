@@ -1,5 +1,6 @@
 
 export const URLS = {
+  BANNER: 'https://galxe.com/scubaprotocol',
   DAPP: 'https://testnet.scuba.finance/',
   CAMPAIGN: 'https://galxe.com/scubaprotocol/campaigns',
   GITBOOK: 'https://scuba-protocol.gitbook.io/scuba-protocol/',

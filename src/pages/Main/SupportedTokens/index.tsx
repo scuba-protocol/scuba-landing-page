@@ -28,7 +28,7 @@ const tokens = [
     icon: <WETH />,
   },
   {
-    symbol: 'WBNB',
+    symbol: 'WBTC',
     name: 'Wrapped Bitcoin',
     icon: <WBTC />,
   }

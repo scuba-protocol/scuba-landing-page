@@ -133,7 +133,7 @@ const Ranking: React.FC = () => {
           <div className="flex-1 flex items-center justify-center">
             <div className="flex flex-col gap-[3.75rem] items-center">
               <div className="app-slogan px-28 text-center">
-                The ‘Treasure Looting’ Leader Board
+                The ‘Treasure Looting’ Leaderboard
               </div>
               <div className="font-medium text-lg leading-[1.2] text-white/80">
                 The ‘Treasure Looting’ Campaign is here—Celebrate the First Beta Test of Scuba!
