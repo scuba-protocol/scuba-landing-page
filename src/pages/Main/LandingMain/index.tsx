@@ -1,4 +1,6 @@
 import React from 'react'
+import cx from 'classnames';
+import { useRecoilValue } from 'recoil';
 
 import { ReactComponent as Arbitrum } from '@assets/images/arbitrum.svg';
 import { ReactComponent as Avalance } from '@assets/images/avalance.svg';
@@ -7,8 +9,10 @@ import { ReactComponent as Optimism } from '@assets/images/optimism.svg';
 import { ReactComponent as Polygon } from '@assets/images/polygon.svg';
 import { URLS } from '@config/constants';
 import NetworksBanner from '@components/NetworksBanner';
+import TopBannerState from '@stores/topBannerState';
 
 const LandingMain: React.FC = (props) => {
+  const topBanner = useRecoilValue(TopBannerState);
   const handleLaunch = () => {
     window.open(URLS.DAPP, '_blank');
   }
@@ -17,7 +21,12 @@ const LandingMain: React.FC = (props) => {
       <div className="absolute z-10 bg-active/50 w-80 h-80 top-0 -left-7 rounded-full app-radial hidden md:flex" />
       <div className="absolute z-10 bg-radial md:bg-radial/70 w-[17.5rem] h-[17.5rem] md:w-[25rem] md:h-[25rem] top-1/2 left-1/2 rounded-full app-radial -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute z-10 bg-blue/20 w-60 h-60 md:w-80 md:h-80 right-0 -bottom-7 md:-right-7 rounded-full app-radial" />
-      <div className="relative z-20 flex flex-col items-center justify-center min-h-[calc(100vh-5rem)] w-full max-w-app mx-auto">
+      <div
+        className={cx(
+          'relative z-20 flex flex-col items-center justify-center min-h-[calc(100vh-5rem)] w-full max-w-app mx-auto',
+          { 'pt-32 md:pt-16': topBanner.open }
+        )}
+      >
         <div className="flex-1 flex items-center justify-center">
           <div className="flex flex-col gap-[3.75rem] items-center">
             <div className="app-slogan px-6 md:px-10 text-center">
