@@ -14,10 +14,10 @@ const TopBanner: React.FC = () => {
     window.open(URLS.BANNER, '_blank');
   }
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden w-screen bg-active">
       <div
         className={cx(
-          'bg-active p-4 grid grid-cols-[1fr] grid-rows-[1.5rem_1fr] md:grid-rows-1 md:grid-cols-[2rem_1fr_2rem] gap-4 items-center w-full text-black shadow-[0_0_1.5rem_0_rgba(30,224,189,0.25)] transition-all duration-700 ease-in-out',
+          'p-4 grid grid-cols-[1fr] grid-rows-[1.5rem_1fr] md:grid-rows-1 md:grid-cols-[2rem_1fr_2rem] gap-4 items-center w-full text-black shadow-[0_0_1.5rem_0_rgba(30,224,189,0.25)] transition-all duration-700 ease-in-out',
           {
             '-mt-[100%] opacity-0': !topBanner.open
           }
