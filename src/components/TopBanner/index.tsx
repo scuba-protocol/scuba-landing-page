@@ -24,8 +24,8 @@ const TopBanner: React.FC = () => {
         )}
       >
         <div className="flex-wrap col-start-1 row-start-2 md:flex-nowrap md:col-start-2 md:row-start-auto col-span-1 flex gap-4 items-center justify-center">
-          <BannerLogo className="w-11 h-11" />
-          <div className="text-xs leading-normal font-normal md:text-base md:leading-none md:font-medium flex-1 md:flex-none">
+          <BannerLogo className="w-11 h-11 flex-grow-0 flex-shrink-0" />
+          <div className="text-xs leading-normal font-normal md:text-base md:leading-none md:font-medium flex-1 md:flex-initial">
             TREASURE HUNTERS! Scuba <span className="font-semibold">Treasure Looting</span> Pub-testing is <span className="font-semibold">LIVE NOW!</span> Collect points! Win airdrops and More! 
           </div>
           <button
